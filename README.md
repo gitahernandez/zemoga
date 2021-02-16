@@ -46,7 +46,7 @@ And navigate to `http://127.0.0.1:8000/`.
 
 ## Usage
 
-![Image of Yaktocat](https://ibb.co/X33ytz3)
+https://ibb.co/X33ytz3
 
 By default there are 3 files loaded:
 
