@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Linking Files</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body class="container">
+        <h2>Please select all 3 kind of files to enable link data feature</h2>
+        <hr>
+        <div id="namespace" >
+            <h3>BD Dataset</h3>
+            {% if namespaces %}
+                
+                <ul>
+                    {% for document in namespaces %}
+                        <li>
+                            <a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a>
+                            <a href="{% url 'delete-file' document.file_name  %} " class="btn btn-danger mb">Delete</a>
+                        </li>
+                
+
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No Found Database File</p>
+            {% endif %}
+
+
+            <form action="{% url "main" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{ form.non_field_errors }}</p>
+
+                <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+                <p>
+                    {{ form.docfile.errors }}
+                    {{ form.docfile }}
+                    <input class="btn btn-primary mb-3" type="submit" value="Upload File"/>
+                </p>
+
+                <input type="hidden" value="DATABASE" name="type" />
+
+            </form>
+         </div>
+
+        <hr>
+
+         <div id="column_reference" >
+
+            <h3>Schema Dataset</h3>
+            {% if column_references %}
+            
+                <ul>
+                    {% for document in column_references %}
+                        <li>
+                            <a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a>
+                            <a href="{% url 'delete-file' document.file_name  %}" class="btn btn-danger mb">Delete</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No Found Schema Files</p>
+            {% endif %}
+
+            <form action="{% url "main" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{ form.non_field_errors }}</p>
+
+                <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+                <p>
+                    {{ form.docfile.errors }}
+                    {{ form.docfile }}
+                    <input type="submit" class="btn btn-primary mb-3" value="Upload File"/>
+                </p>
+                <input type="hidden" value="SCHEMA" name="type" />
+    
+            </form>
+         </div> 
+         
+         <hr>
+
+         <div id="data_point" >
+            <h3>Data Dataset</h3>
+            {% if data_points %}
+            
+                <ul>
+                    {% for document in data_points %}
+                        <li>
+                            <a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a>
+                            <a href="{% url 'delete-file' document.file_name  %}" class="btn btn-danger mb">Delete</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No Found Data Files</p>
+            {% endif %}
+
+            <form action="{% url "main" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{ form.non_field_errors }}</p>
+
+                <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+                <p>
+                    {{ form.docfile.errors }}
+                    {{ form.docfile }}
+                    <input type="submit" class="btn btn-primary mb-3" value="Upload File"/>
+                </p>
+
+                <input type="hidden" value="DATA" name="type" />
+                
+            </form>
+         </div>
+         <hr>
+        {% if enabled_link_data_button %}
+            <p><a class="btn btn-success mb-3" href="{% url 'link-data' %}">Link Datasets</a></p>
+        {% endif %}
+
+
+    </body>
+</html>
