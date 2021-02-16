@@ -41,8 +41,9 @@ def link_data_frames(database_df, schema_df, data_df):
     data_df = data_df[~data_df["DATA_Column_9"].str.contains(";")]
 
     database_schema_df = pd.merge(schema_df, database_df, left_on="SCHEMA_Column_1", right_on="DATABASE_Column_1")
-    database_schema_data_df = pd.merge(database_schema_df, data_df, left_on="SCHEMA_Column_5", right_on="DATA_Column_1")
 
+    database_schema_data_df = pd.merge(database_schema_df, data_df, left_on="SCHEMA_Column_5", right_on="DATA_Column_1")
+    database_schema_data_df = database_schema_data_df[["DATABASE_Column_2", "SCHEMA_Column_2", "DATA_Column_9"]]
     database_schema_data_df.to_csv('media/linked_data.csv', index = False)
 
     zip_file = zipfile.ZipFile('media/rezult.zip', 'w')
