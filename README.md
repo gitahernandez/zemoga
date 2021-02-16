@@ -43,3 +43,16 @@ Run the image and binding associated ports
     docker run -dp 8000:8000 zemoga
     
 And navigate to `http://127.0.0.1:8000/`.
+
+## Usage
+
+![Image of Yaktocat](https://ibb.co/X33ytz3)
+
+By default there are 3 files loaded:
+
+* DATABASE_dataset_namespace_reference-csv.csv
+* SCHEMA_equity_research_industry_classification_data.csv
++ DATA_equity_research_industry_classification_data.csv
+
+Click on Link Datasets button to link files and generate error file (both in a zip file)
+
