@@ -46,7 +46,7 @@ And navigate to `http://127.0.0.1:8000/`.
 
 ## Usage
 
-https://ibb.co/X33ytz3
+https://i.ibb.co/Brr4Bgr/Screenshot-from-2021-02-15-21-57-19.png
 
 By default there are 3 files loaded:
 
