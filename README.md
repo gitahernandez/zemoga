@@ -33,7 +33,7 @@ And navigate to `http://127.0.0.1:8000/`.
 ### Install
 
     git clone https://github.com/gitahernandez/zemoga.git
-    cd dockerfile
+    cd zemoga
     docker build -t zemoga .
 
 ### Run
