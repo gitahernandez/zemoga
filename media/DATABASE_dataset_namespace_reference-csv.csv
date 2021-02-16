@@ -1,6 +1,0 @@
-﻿e8d30102-a23f-41b5-9f3d-cfce5e61c435;Fund;fund;"This namespace contains data associated with Fund Investments types.  Included within the namespace are Open-End Funds and Exchange Traded Funds (ETF); Closed-End Funds (CEF).";NULL
-c485539b-c6cd-4fbc-ad6e-9e009dd42c37;Equity;equity;NULL;sme_equity
-8c28210b-50cd-4587-b695-632eea606157;Company;company;NULL;NULL
-53a7923b-43ac-4487-b9ed-ffe0b25f50f4;Country;country;NULL;NULL
-ea80e68c-54c3-4826-9b7e-79bab74accff;Managed Investment;managed_investment;"This namespace contains data associated with investments constructed from a portfolio of other investments.  Included within the namespace are Open-End Funds and ETFs; Closed-End Funds; underlying investments for policies and plans; separate accounts, model portfolios, and other structures offering portfolio-based investment options.";sme_managed_investment
-68c30c51-b008-4312-8975-6d97feda74ea;Incubating;incubating;Incubating datasets that does not follow any standards;NULL
