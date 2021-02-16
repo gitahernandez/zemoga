@@ -23,7 +23,7 @@ def main(request):
             return redirect('main')
         
         else:
-            message = 'The form is not valid. Fix the following error:'
+            message = 'Error uploading file...'
     
     else:
         form = FileForm()
