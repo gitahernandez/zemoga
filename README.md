@@ -28,7 +28,7 @@ $ (zemoga)pip install -r requirements.txt
 And navigate to `http://127.0.0.1:8000/`.
 
 
-## Run using docker
+## Run using Docker
 
 ### Install
 
@@ -38,8 +38,7 @@ And navigate to `http://127.0.0.1:8000/`.
 
 ### Run
 
-Run the image, binding associated ports, and mounting the present working
-directory:
+Run the image and binding associated ports
 
     docker run -dp 8000:8000 zemoga
     
